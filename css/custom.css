@@ -1,0 +1,25 @@
+.ng-enter,.ng-show {
+    -webkit-animation: fadeAnimation 5s; /* Chrome, Safari, Opera */
+    animation: fadeAnimation 5s;
+}
+
+@-webkit-keyframes fadeAnimation
+{
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+/* Standard syntax */
+@keyframes fadeAnimation
+{
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.listDecorationNone {
+    list-style-type: none;
+}
+
+.glyphicon {
+   cursor: pointer;
+}

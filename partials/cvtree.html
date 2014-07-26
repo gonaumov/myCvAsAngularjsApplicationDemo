@@ -1,0 +1,13 @@
+<ul class="listDecorationNone">
+    <li data-ng-repeat="(cvkey,cvitem) in cvtree">
+        <span data-ng-show="!showNode" class="glyphicon glyphicon-plus" data-ng-click="showNode=!showNode"></span>
+        <span data-ng-show="showNode" class="glyphicon glyphicon-minus" data-ng-click="showNode=!showNode"></span>
+        <a href="">{{cvkey}}</a>
+        <ul class="listDecorationNone" data-ng-show="showNode">
+            <li data-ng-if="!isObject(cvitem)">
+                <a href="">{{cvitem}}</a>
+            </li>
+            <cvtree data-ng-if="isObject(cvitem)" cvtree="cvitem"></cvtree>
+        </ul>
+    </li>
+</ul>
